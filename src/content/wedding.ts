@@ -9,7 +9,7 @@ const ENGAGEMENT_START = "2026-11-21T16:00:00+05:30";
  * Still placeholder: parents' names (hidden until known), livestream link.
  */
 export const wedding: WeddingContent = {
-  siteUrl: "https://priyank-and-tosmy.example.com",
+  siteUrl: "https://invitation-nine-nu.vercel.app/",
 
   couple: {
     photo: photos.hero,
