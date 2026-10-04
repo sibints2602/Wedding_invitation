@@ -4,13 +4,14 @@ import type { Photo } from "./types";
 export const photos: { hero: Photo; heroScene: Photo } = {
   "hero": {
     "src": "/photos/hero.jpg",
-    "width": 832,
-    "height": 1248,
+    "width": 941,
+    "height": 1176,
     "alt": {
-      "en": "Priyank and Tosmy",
-      "ml": "പ്രിയങ്കും ടോസ്മിയും"
+      "en": "Tosmy and Priyank",
+      "ml": "ടോസ്മിയും പ്രിയങ്കും",
+      "kn": "ಟೋಸ್ಮಿ ಮತ್ತು ಪ್ರಿಯಾಂಕ್"
     },
-    "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQAAsDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABAX/xAAfEAACAgICAwEAAAAAAAAAAAABAgMRAAQhQQUSUXH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABcRAQEBAQAAAAAAAAAAAAAAAAEAEUH/2gAMAwEAAhEDEQA/AKvlNt9RIjGQtuASQK/MbrTJs68cyClkUMB8yXtze0zR1E6jmnF03RxGu6xwIiigBwB1ldhcL//Z"
+    "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQAA0DASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAQIDBf/EAB0QAAMAAgIDAAAAAAAAAAAAAAECEQADBCESMVH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAMAwEAAhEDEQA/AN3fodiNiMQVUiWY2tiUFILDoz7hYbHcIhWHsg5LjzwotPujEK//2Q=="
   },
   "heroScene": {
     "src": "/photos/hero-church.jpg",
@@ -18,7 +19,8 @@ export const photos: { hero: Photo; heroScene: Photo } = {
     "height": 1104,
     "alt": {
       "en": "Inside the church",
-      "ml": "പള്ളിക്കകം"
+      "ml": "പള്ളിക്കകം",
+      "kn": "ಚರ್ಚ್‌ನ ಒಳಗೆ"
     },
     "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQAAwDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAQIDBf/EACAQAAIBAwQDAAAAAAAAAAAAAAECAwAEEQUSITEVQUL/xAAVAQEBAAAAAAAAAAAAAAAAAAACA//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAwDAQACEQMRAD8AhHZON6wqWVOSSexTeLiYAu2GPYoWDTzWEkkYIkQAgN9g+qzrjU5ElwUfBAIwxHFRBnpf/9k="
   }

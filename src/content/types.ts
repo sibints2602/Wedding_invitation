@@ -1,7 +1,8 @@
-export type Lang = "en" | "ml";
+export const LANGS = ["en", "ml", "kn"] as const;
+export type Lang = (typeof LANGS)[number];
 
 /** Every user-facing string carries both languages. */
-export type Localized = { en: string; ml: string };
+export type Localized = Record<Lang, string>;
 
 export interface Photo {
   /** Path under /public, e.g. "/photos/bride.jpg" */

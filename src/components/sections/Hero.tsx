@@ -75,9 +75,9 @@ export function Hero({ guestName }: { guestName: string | null }) {
 
         {hosts ? (
           <motion.div variants={line} className="mt-8 flex flex-col items-center">
-            <p className="t-body text-ink">{t(hosts.groom)}</p>
-            <span className="my-4 block size-2 rotate-45 bg-accent" aria-hidden="true" />
             <p className="t-body text-ink">{t(hosts.bride)}</p>
+            <span className="my-4 block size-2 rotate-45 bg-accent" aria-hidden="true" />
+            <p className="t-body text-ink">{t(hosts.groom)}</p>
             <p className="t-lead mt-8 max-w-[26rem] text-accent-dusk text-balance">{t(wording.requestLine)}</p>
           </motion.div>
         ) : (

@@ -12,17 +12,17 @@ type Props = {
   joinerClassName?: string;
 };
 
-/** The couple's first names, stacked with "and" between them, in the names voice: the hero's greeting. */
+/** The couple's first names, the bride's first, stacked with "and" between them, in the names voice: the hero's greeting. */
 export function CoupleNames({ as: Comp = "p", className, joinerClassName }: Props) {
   const { t } = useLang();
   const { groom, bride } = wedding.couple;
   return (
     <Comp className={cn("t-names flex flex-col items-center text-balance", className)}>
-      <span>{t(groom.firstName)}</span>
+      <span>{t(bride.firstName)}</span>
       <span className={cn("t-names-sm my-1", joinerClassName)} aria-hidden="true">
         {t(ui.and)}
       </span>
-      <span>{t(bride.firstName)}</span>
+      <span>{t(groom.firstName)}</span>
     </Comp>
   );
 }

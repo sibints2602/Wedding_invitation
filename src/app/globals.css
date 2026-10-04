@@ -16,6 +16,7 @@
   --font-script: var(--font-pinyon), "Pinyon Script", cursive;
   --font-serif: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
   --font-ml: var(--font-noto-ml), "Noto Serif Malayalam", serif;
+  --font-kn: var(--font-noto-kn), "Noto Serif Kannada", serif;
 
   --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
   --ease-in-out-strong: cubic-bezier(0.77, 0, 0.175, 1);
@@ -193,30 +194,31 @@
   .t-ui { font-size: 1rem; }
   .t-ui-sm { font-size: 0.92rem; }
   /* a control labelled in the other language keeps that language's voice (the language toggle) */
-  .t-ui-sm[lang="ml"] {
-    font-family: var(--font-ml);
+  .t-ui-sm:is([lang="ml"], [lang="kn"]) {
     font-weight: 500;
     font-size: 0.88rem;
     letter-spacing: 0;
   }
+  .t-ui-sm[lang="ml"] { font-family: var(--font-ml); }
+  .t-ui-sm[lang="kn"] { font-family: var(--font-kn); }
 
-  /* Malayalam: one family for every voice, with its own sizes */
-  html[data-lang="ml"] :is(.t-names, .t-names-md, .t-names-sm, .t-title, .t-verse, .t-lead, .t-strong, .t-body, .t-label, .t-ui, .t-ui-sm) {
-    font-family: var(--font-ml);
+  /* Malayalam and Kannada: one family for every voice, with its own sizes (both scripts are tall and share them) */
+  html:is([data-lang="ml"], [data-lang="kn"]) :is(.t-names, .t-names-md, .t-names-sm, .t-title, .t-verse, .t-lead, .t-strong, .t-body, .t-label, .t-ui, .t-ui-sm) {
+    font-family: var(--font-indic);
     letter-spacing: 0;
   }
-  html[data-lang="ml"] .t-names { font-weight: 600; font-size: clamp(2.4rem, 2rem + 1.6vw, 3.25rem); line-height: 1.3; }
-  html[data-lang="ml"] .t-names-md { font-weight: 600; font-size: clamp(1.9rem, 1.6rem + 1.2vw, 2.5rem); line-height: 1.3; }
-  html[data-lang="ml"] .t-names-sm { font-weight: 600; font-size: clamp(1.4rem, 1.25rem + 0.6vw, 1.7rem); line-height: 1.4; }
-  html[data-lang="ml"] .t-title { font-weight: 600; font-size: clamp(1.7rem, 1.45rem + 1vw, 2.2rem); line-height: 1.35; }
-  html[data-lang="ml"] .t-verse { font-size: clamp(1.2rem, 1.08rem + 0.5vw, 1.45rem); line-height: 1.8; }
-  html[data-lang="ml"] .t-lead { font-size: clamp(1.1rem, 1.02rem + 0.3vw, 1.25rem); line-height: 1.75; }
-  html[data-lang="ml"] .t-strong { font-weight: 600; font-size: clamp(1.15rem, 1.08rem + 0.3vw, 1.3rem); line-height: 1.6; }
-  html[data-lang="ml"] .t-body { font-size: clamp(1.02rem, 0.98rem + 0.15vw, 1.1rem); line-height: 1.8; }
-  html[data-lang="ml"] .t-label { font-weight: 400; font-size: clamp(0.92rem, 0.88rem + 0.15vw, 1rem); line-height: 1.7; }
-  html[data-lang="ml"] .t-ui { font-weight: 500; font-size: 0.95rem; }
-  html[data-lang="ml"] .t-ui-sm { font-weight: 500; font-size: 0.88rem; }
-  html[data-lang="ml"] .t-ui-sm[lang="en"] {
+  html:is([data-lang="ml"], [data-lang="kn"]) .t-names { font-weight: 600; font-size: clamp(2.4rem, 2rem + 1.6vw, 3.25rem); line-height: 1.3; }
+  html:is([data-lang="ml"], [data-lang="kn"]) .t-names-md { font-weight: 600; font-size: clamp(1.9rem, 1.6rem + 1.2vw, 2.5rem); line-height: 1.3; }
+  html:is([data-lang="ml"], [data-lang="kn"]) .t-names-sm { font-weight: 600; font-size: clamp(1.4rem, 1.25rem + 0.6vw, 1.7rem); line-height: 1.4; }
+  html:is([data-lang="ml"], [data-lang="kn"]) .t-title { font-weight: 600; font-size: clamp(1.7rem, 1.45rem + 1vw, 2.2rem); line-height: 1.35; }
+  html:is([data-lang="ml"], [data-lang="kn"]) .t-verse { font-size: clamp(1.2rem, 1.08rem + 0.5vw, 1.45rem); line-height: 1.8; }
+  html:is([data-lang="ml"], [data-lang="kn"]) .t-lead { font-size: clamp(1.1rem, 1.02rem + 0.3vw, 1.25rem); line-height: 1.75; }
+  html:is([data-lang="ml"], [data-lang="kn"]) .t-strong { font-weight: 600; font-size: clamp(1.15rem, 1.08rem + 0.3vw, 1.3rem); line-height: 1.6; }
+  html:is([data-lang="ml"], [data-lang="kn"]) .t-body { font-size: clamp(1.02rem, 0.98rem + 0.15vw, 1.1rem); line-height: 1.8; }
+  html:is([data-lang="ml"], [data-lang="kn"]) .t-label { font-weight: 400; font-size: clamp(0.92rem, 0.88rem + 0.15vw, 1rem); line-height: 1.7; }
+  html:is([data-lang="ml"], [data-lang="kn"]) .t-ui { font-weight: 500; font-size: 0.95rem; }
+  html:is([data-lang="ml"], [data-lang="kn"]) .t-ui-sm { font-weight: 500; font-size: 0.88rem; }
+  html:is([data-lang="ml"], [data-lang="kn"]) .t-ui-sm[lang="en"] {
     font-family: var(--font-serif);
     font-weight: 600;
     letter-spacing: 0.06em;
@@ -371,7 +373,12 @@ html.lenis, html.lenis body { height: auto; }
   clip-path: polygon(0 calc(var(--flap-side) * 100%), 50% calc(var(--flap) * 100%), 100% calc(var(--flap-side) * 100%), 100% 100%, 0 100%);
 }
 
-/* ───────────────────────── Malayalam mode ───────────────────────── */
-html[data-lang="ml"] body { font-family: var(--font-ml); }
-/* Malayalam has no italic (the serif ampersand inside a script line is the only italic glyph) */
-html[data-lang="ml"] .italic { font-style: normal; }
+/* ───────────────────────── Malayalam and Kannada mode ───────────────────────── */
+html[data-lang="ml"] { --font-indic: var(--font-ml); }
+html[data-lang="kn"] { --font-indic: var(--font-kn); }
+html:is([data-lang="ml"], [data-lang="kn"]) body { font-family: var(--font-indic); }
+/* neither script has an italic (the serif ampersand inside a script line is the only italic glyph) */
+html:is([data-lang="ml"], [data-lang="kn"]) .italic { font-style: normal; }
+/* a control labelled in another language keeps that language's voice (the language switch) */
+html:is([data-lang="ml"], [data-lang="kn"]) .t-ui-sm[lang="ml"] { font-family: var(--font-ml); }
+html:is([data-lang="ml"], [data-lang="kn"]) .t-ui-sm[lang="kn"] { font-family: var(--font-kn); }

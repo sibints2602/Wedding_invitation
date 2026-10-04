@@ -4,13 +4,13 @@ import type { WeddingEvent } from "@/content/types";
 
 const e: WeddingEvent = {
   id: "holy-matrimony",
-  name: { en: "Holy Matrimony", ml: "വിവാഹ ശുശ്രൂഷ" },
+  name: { en: "Holy Matrimony", ml: "വിവാഹ ശുശ്രൂഷ", kn: "വിവാഹ ശുശ്രൂഷ" },
   startIso: "2027-01-23T10:30:00+05:30",
   endIso: "2027-01-23T12:00:00+05:30",
-  venue: { en: "St. Mary's Cathedral", ml: "സെന്റ് മേരീസ് കത്തീഡ്രൽ" },
-  address: { en: "Cathedral Road, Kottayam, Kerala", ml: "കോട്ടയം" },
+  venue: { en: "St. Mary's Cathedral", ml: "സെന്റ് മേരീസ് കത്തീഡ്രൽ", kn: "സെന്റ് മേരീസ് കത്തീഡ്രൽ" },
+  address: { en: "Cathedral Road, Kottayam, Kerala", ml: "കോട്ടയം", kn: "കോട്ടയം" },
   mapsQuery: "St. Mary's Cathedral, Kottayam",
-  note: { en: "Please be seated by 10:15 am.", ml: "10:15" },
+  note: { en: "Please be seated by 10:15 am.", ml: "10:15", kn: "10:15" },
 };
 
 describe("googleCalendarUrl", () => {
@@ -36,7 +36,7 @@ describe("buildIcs", () => {
   });
   test("escapes commas, semicolons and newlines in text fields", () => {
     expect(ics).toContain("LOCATION:St. Mary's Cathedral\\, Cathedral Road\\, Kottayam\\, Kerala");
-    const withNewline = buildIcs({ ...e, note: { en: "Line one\nLine; two", ml: "" } }, "en", "https://x.test");
+    const withNewline = buildIcs({ ...e, note: { en: "Line one\nLine; two", ml: "", kn: "" } }, "en", "https://x.test");
     expect(withNewline).toContain("Line one\\nLine\\; two");
   });
   test("icsDataUrl produces a text/calendar data URL", () => {

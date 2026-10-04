@@ -1,12 +1,12 @@
 "use client";
 
 import { createContext, useCallback, useContext, useEffect, useMemo, useSyncExternalStore, type ReactNode } from "react";
-import type { Lang, Localized } from "@/content/types";
+import { LANGS, type Lang, type Localized } from "@/content/types";
 
 const STORAGE_KEY = "lang";
 
 function isLang(v: unknown): v is Lang {
-  return v === "en" || v === "ml";
+  return typeof v === "string" && (LANGS as readonly string[]).includes(v);
 }
 
 /** `?lang=` wins, then stored preference, else English. */

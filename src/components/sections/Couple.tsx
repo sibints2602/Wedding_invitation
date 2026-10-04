@@ -60,9 +60,9 @@ export function Couple() {
   return (
     <section id="couple" className="relative damask overflow-hidden px-6 py-20 md:py-28">
       <div className="mx-auto max-w-[64rem] md:grid md:grid-cols-[minmax(0,24rem)_1fr] md:items-center md:gap-16 md:pl-5 lg:gap-24">
-        {/* phones: the groom opens the spread above the photograph */}
+        {/* phones: the bride opens the spread above the photograph */}
         <Reveal stagger={0.1} className="md:hidden">
-          <PersonBlock person={groom} lead={ui.theGroom} className="items-start text-left" />
+          <PersonBlock person={bride} lead={ui.theBride} className="items-start text-left" />
         </Reveal>
 
         {/* the photograph, a mounted print laid on the page, set to the left on phones. The frame overhangs the
@@ -85,7 +85,7 @@ export function Couple() {
                 transition={{ duration: 1.1, ease: EASE_OUT }}
               >
                 <div className="relative aspect-[4/5] overflow-hidden rounded-[2px] bg-paper-deep">
-                  <Image src={photo.src} alt={t(photo.alt)} fill sizes="(min-width: 768px) 384px, 74vw" placeholder={photo.blurDataURL ? "blur" : "empty"} blurDataURL={photo.blurDataURL} className="object-cover object-[50%_20%]" />
+                  <Image src={photo.src} alt={t(photo.alt)} fill sizes="(min-width: 768px) 384px, 74vw" placeholder={photo.blurDataURL ? "blur" : "empty"} blurDataURL={photo.blurDataURL} className="object-cover object-[50%_30%]" />
                 </div>
               </motion.div>
             </div>
@@ -109,10 +109,10 @@ export function Couple() {
           </div>
         </Reveal>
 
-        {/* the names: beside the photograph on wide screens, the bride closing the spread on phones */}
+        {/* the names: beside the photograph on wide screens, the groom closing the spread on phones */}
         <div className="md:pl-6">
           <Reveal stagger={0.1} className="hidden md:block">
-            <PersonBlock person={groom} lead={ui.theGroom} className="items-start text-left" />
+            <PersonBlock person={bride} lead={ui.theBride} className="items-start text-left" />
           </Reveal>
           <Reveal className="hidden md:my-8 md:block">
             <div className="flex items-center gap-5" aria-hidden="true">
@@ -124,7 +124,7 @@ export function Couple() {
             </div>
           </Reveal>
           <Reveal stagger={0.1} className="mt-12 md:mt-0">
-            <PersonBlock person={bride} lead={ui.theBride} className="items-end text-right md:items-start md:text-left" />
+            <PersonBlock person={groom} lead={ui.theGroom} className="items-end text-right md:items-start md:text-left" />
           </Reveal>
           <Reveal className="mt-12">
             <p className="t-lead text-center text-accent-dusk text-balance md:text-left">{t(ui.coupleLead)}</p>

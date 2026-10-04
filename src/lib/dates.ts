@@ -1,7 +1,8 @@
 import type { Lang } from "@/content/types";
 
 const TZ = "Asia/Kolkata";
-const locale = (lang: Lang) => (lang === "ml" ? "ml-IN" : "en-IN");
+const LOCALES: Record<Lang, string> = { en: "en-IN", ml: "ml-IN", kn: "kn-IN" };
+const locale = (lang: Lang) => LOCALES[lang];
 
 /** "21" */
 export function formatDay(iso: string, lang: Lang): string {
