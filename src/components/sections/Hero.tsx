@@ -43,7 +43,7 @@ export function Hero({ guestName }: { guestName: string | null }) {
           sizes="(min-width: 1024px) 46rem, 100vw"
           placeholder="blur"
           blurDataURL={wedding.hero.photo.blurDataURL}
-          className="object-cover object-[50%_18%] md:object-[50%_42%]"
+          className="object-cover object-[50%_12%] md:object-[50%_14%]"
         />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(251,250,247,0)_55%,rgba(251,250,247,0.75)_82%,#fbfaf7_100%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(251,250,247,0.35)_0%,rgba(251,250,247,0)_22%)]" />

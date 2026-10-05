@@ -72,7 +72,7 @@ export const wedding: WeddingContent = {
     },
   ],
 
-  hero: { photo: photos.heroScene },
+  hero: { photo: photos.heroCouple },
 
   livestream: {
     url: "https://www.youtube.com/live/placeholder",
